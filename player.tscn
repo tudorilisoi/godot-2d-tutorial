@@ -3,10 +3,18 @@
 [ext_resource type="Script" uid="uid://cwmf6ld0k3gjn" path="res://player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cbmtse84taubs" path="res://art/playerGrey_walk1.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c3gmpqvtt3eji" path="res://art/playerGrey_walk2.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://bfn7p5hfn7wgr" path="res://art/playerGrey_up1.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cvyn22bbuefqc" path="res://art/playerGrey_up2.png" id="3_2hs0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hqtel"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}],
 "loop": true,
 "name": &"up",
 "speed": 5.0
@@ -36,7 +44,7 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_hqtel")
 animation = &"walk"
 frame = 1
-frame_progress = 0.15765645
+frame_progress = 0.56340915
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1939402241]
 shape = SubResource("CapsuleShape2D_sweqy")
