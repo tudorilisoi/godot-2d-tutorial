@@ -4,6 +4,14 @@ extends Node
 var score
 
 func _ready():
+	var screen_size = get_viewport().get_visible_rect().size
+	var curve = Curve2D.new()
+	curve.add_point(Vector2.ZERO)
+	curve.add_point(Vector2(screen_size.x, 0))
+	curve.add_point(screen_size)
+	curve.add_point(Vector2(0, screen_size.y))
+	curve.add_point(Vector2.ZERO)
+	$MobPath.curve = curve
 	new_game()
 
 func game_over():
@@ -16,7 +24,6 @@ func new_game():
 	$StartTimer.start()
 	
 
-
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob scene.
 	var mob = mob_scene.instantiate()
@@ -26,7 +33,7 @@ func _on_mob_timer_timeout():
 	mob_spawn_location.progress_ratio = randf()
 
 	# Set the mob's position to the random location.
-	mob.position = mob_spawn_location.position
+	mob.position = mob_spawn_location.global_position
 
 	# Set the mob's direction perpendicular to the path direction.
 	var direction = mob_spawn_location.rotation + PI / 2
