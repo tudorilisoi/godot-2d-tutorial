@@ -12,7 +12,8 @@ func _ready():
 	curve.add_point(Vector2(0, screen_size.y))
 	curve.add_point(Vector2.ZERO)
 	$MobPath.curve = curve
-	#new_game()
+	$Player.hide()
+	$HUD.focusStartButton()
 
 func game_over():
 	$ScoreTimer.stop()
@@ -27,6 +28,7 @@ func new_game():
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	get_tree().call_group("mobs", "queue_free")
+	$Player.show()	
 	#$MobTimer.start()
 	
 
