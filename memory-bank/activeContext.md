@@ -2,49 +2,40 @@
 
 ## Current Work Focus
 
-Initializing the memory bank structure for the 2D tutorial project. Currently setting up the foundational documentation and project structure.
+Implementing core game mechanics including mob spawning, score tracking, and game state management in the `Main` scene.
 
 ## Recent Changes
 
-- Created memory-bank directory structure
-- Initialized core documentation files:
-  - projectbrief.md: Project overview and requirements
-  - productContext.md: Purpose and user goals
-  - activeContext.md: Current state and progress
-  - systemPatterns.md: Architecture and technical decisions
-  - techContext.md: Technology stack and setup
-  - progress.md: Project status and milestones
-- Configured mob-player collision layers, masks and signal connections.
+- Created memory-bank directory structure and core documentation
+- Implemented `Player` movement, animation, and hit detection in `player.gd`
+- Implemented `Mob` behavior with random animations and screen-exit cleanup in `mob.gd`
+- Implemented `Main` scene logic for spawning mobs, tracking score, and handling game start/over transitions
+- Configured input map for player movement (arrows/WASD)
+- Integrated Jolt Physics for 3D (as seen in `project.godot`, though the project is 2D)
 
 ## Next Steps
 
-1. Complete remaining core files (systemPatterns.md, techContext.md, progress.md)
-2. Analyze existing project files to understand current implementation
-3. Document current technical architecture and patterns
-4. Establish development workflow and best practices
-5. Implement basic player movement and animation (In Progress)
+1. Implement User Interface (UI) for score display, start button, and game over messages
+2. Add sound effects and background music
+3. Refine collision layers and masks for better interaction control
+4. Implement game pause and restart functionality
+5. Polish visual effects (e.g., player hit feedback)
 
 ## Active Decisions and Considerations
 
-- **Documentation First Approach**: Establishing comprehensive documentation before diving into code changes
-- **Modular Structure**: Creating separate files for different aspects of project context
-- **Progressive Documentation**: Building documentation incrementally as project evolves
-
-## Important Patterns and Preferences
-
-- **Clear File Organization**: Using descriptive file names and logical structure
-- **Comprehensive Documentation**: Covering all aspects of the project from technical to user-focused
-- **Future-Proofing**: Creating documentation that can evolve with the project
+- **Area2D vs KinematicBody2D**: Using `Area2D` for the player to simplify collision detection for this beginner tutorial.
+- **RigidBody2D for Mobs**: Using `RigidBody2D` for mobs to leverage built-in physics for linear velocity movement.
+- **Signal-Driven Architecture**: Using signals (`hit` from Player, timers from Main) to decouple core systems.
 
 ## Learnings and Project Insights
 
-- The project appears to be a Godot 2D tutorial with basic player movement implementation
-- Existing files include player.gd (script) and player.tscn (scene)
-- Art assets are present in the art/ directory
-- The project uses standard Godot project structure
+- Using `set_deferred("disabled", true)` on collision shapes is necessary when modifying physics state during a collision callback.
+- `RigidBody2D` with `linear_velocity` provides a simple way to move enemies in a straight line without manual position updates.
+- Randomization of mob types and spawn locations adds variety to the gameplay loop.
 
 ## Current Status
 
-- Memory bank infrastructure: 50% complete (3 of 6 core files created)
-- Project analysis: Pending (need to examine existing code)
-- Technical documentation: Pending (need to analyze current implementation)
+- Memory bank infrastructure: 100% complete
+- Core Game Systems: 70% complete (Movement, Spawning, Hit Detection done)
+- Project analysis: Ongoing documentation of newly added components
+- Technical documentation: Updating with `Main` and `Mob` architecture
