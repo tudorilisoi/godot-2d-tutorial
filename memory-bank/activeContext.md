@@ -14,6 +14,7 @@ Initializing the memory bank structure for the 2D tutorial project. Currently se
   - systemPatterns.md: Architecture and technical decisions
   - techContext.md: Technology stack and setup
   - progress.md: Project status and milestones
+- Configured mob-player collision layers, masks and signal connections.
 
 ## Next Steps
 
@@ -21,6 +22,7 @@ Initializing the memory bank structure for the 2D tutorial project. Currently se
 2. Analyze existing project files to understand current implementation
 3. Document current technical architecture and patterns
 4. Establish development workflow and best practices
+5. Implement basic player movement and animation (In Progress)
 
 ## Active Decisions and Considerations
 
