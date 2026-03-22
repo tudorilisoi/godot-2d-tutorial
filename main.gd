@@ -17,7 +17,7 @@ func _ready():
 func game_over():
 	$ScoreTimer.stop()
 	$HUD.show_game_over()
-	#$MobTimer.stop()
+	$MobTimer.stop()
 
 func new_game():
 	score = 0
@@ -25,6 +25,7 @@ func new_game():
 	$HUD.show_message("Get Ready")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
+	get_tree().call_group("mobs", "queue_free")
 	#$MobTimer.start()
 	
 
