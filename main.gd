@@ -13,7 +13,9 @@ func _ready():
 	curve.add_point(Vector2.ZERO)
 	$MobPath.curve = curve
 	$Player.hide()
-	$HUD.focusStartButton()
+	$HUD.focusStartButton()  
+	
+	
 
 func game_over():
 	$ScoreTimer.stop()
