@@ -18,6 +18,7 @@ func game_over():
 	$ScoreTimer.stop()
 	$HUD.show_game_over()
 	$MobTimer.stop()
+	$DeathSound.play()
 
 func new_game():
 	score = 0
