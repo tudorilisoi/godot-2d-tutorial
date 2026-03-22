@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cvu34fabl437w"]
+
+[ext_resource type="FontFile" uid="uid://trsuxtubmp6d" path="res://fonts/Xolonium-Regular.ttf" id="1_37p78"]
+[ext_resource type="Script" uid="uid://ba1yogl88qa70" path="res://hud.gd" id="1_64ctp"]
+
+[node name="HUD" type="CanvasLayer" unique_id=873895947]
+script = ExtResource("1_64ctp")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=18291219]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_top = 56.0
+offset_right = 21.0
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="Message" type="Label" parent="." unique_id=1592440502]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_right = 124.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Fuck'em all!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=966197700]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = 144.0
+offset_right = 132.0
+offset_bottom = 244.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="MessageTimer" type="Timer" parent="." unique_id=865306464]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
