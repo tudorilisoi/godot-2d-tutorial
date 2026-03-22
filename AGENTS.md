@@ -8,19 +8,19 @@ The Memory Bank consists of core files and optional context files, all in Markdo
 
 ### Core Files (Required)
 
-1. `projectbrief.md`
+1. `memory-bank/projectbrief.md`
    - Foundation document that shapes all other files
    - Created at project start if it doesn't exist
    - Defines core requirements and goals
    - Source of truth for project scope
 
-2. `productContext.md`
+2. `memory-bank/productContext.md`
    - Why this project exists
    - Problems it solves
    - How it should work
    - User experience goals
 
-3. `activeContext.md`
+3. `memory-bank/activeContext.md`
    - Current work focus
    - Recent changes
    - Next steps
@@ -28,21 +28,21 @@ The Memory Bank consists of core files and optional context files, all in Markdo
    - Important patterns and preferences
    - Learnings and project insights
 
-4. `systemPatterns.md`
+4. `memory-bank/systemPatterns.md`
    - System architecture
    - Key technical decisions
    - Design patterns in use
    - Component relationships
    - Critical implementation paths
 
-5. `techContext.md`
+5. `memory-bank/techContext.md`
    - Technologies used
    - Development setup
    - Technical constraints
    - Dependencies
    - Tool usage patterns
 
-6. `progress.md`
+6. `memory-bank/progress.md`
    - What works
    - What's left to build
    - Current status
