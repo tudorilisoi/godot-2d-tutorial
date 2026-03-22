@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c18hj8rorwj74" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://sewvl7mr7es4" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bkhnmbrv3pclo" path="res://mob.tscn" id="2_h2yge"]
 
 [sub_resource type="Curve2D" id="Curve2D_ig7tw"]
 _data = {
@@ -11,6 +12,7 @@ point_count = 5
 
 [node name="Main" type="Node" unique_id=746538364]
 script = ExtResource("1_0xm2m")
+mob_scene = ExtResource("2_h2yge")
 
 [node name="Player" parent="." unique_id=1357928003 instance=ExtResource("1_ig7tw")]
 
